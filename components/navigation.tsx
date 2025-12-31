@@ -33,8 +33,18 @@ export function Navigation() {
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-xl font-bold tracking-tight hover:scale-105 transition-transform group">
-            <span className="text-foreground group-hover:text-gradient transition-all">Ghana Kendo</span>
+          <Link
+            href="/"
+            className="flex items-center gap-3 text-xl font-bold tracking-tight hover:scale-105 transition-transform group"
+          >
+            <img
+              src="/kendo_logo.png"
+              alt="Ghana Kendo Federation Logo"
+              className="h-8 w-8 object-contain"
+            />
+            <span className="text-foreground group-hover:text-gradient transition-all">
+              Ghana Kendo Federation
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

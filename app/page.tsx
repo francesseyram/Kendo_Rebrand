@@ -110,7 +110,7 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-xl p-8 glass border border-primary/20 hover:border-primary/40 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/10">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-colors" />
               <div className="relative">
-                <div className="text-5xl md:text-6xl font-bold mb-3 text-gradient">2015</div>
+                <div className="text-5xl md:text-6xl font-bold mb-3 text-gradient">2024</div>
                 <div className="text-sm text-muted-foreground font-medium">Year Founded</div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl blur-3xl group-hover:blur-[100px] transition-all" />
               <div className="absolute inset-0 border border-primary/20 rounded-xl" />
               <Image
-                src="/japanese-ambassador-yoshimura-introducing-kendo-to.jpg"
+                src="/japanese-ambassador-yoshimura-introducing-kendo-to.jpeg"
                 alt="Introduction of Kendo to Ghana"
                 fill
                 className="object-cover rounded-xl relative z-10 group-hover:scale-[1.02] transition-transform duration-700"
@@ -147,12 +147,10 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  In 2015, His Excellency Kaoru Yoshimura, the Japanese Ambassador to Ghana, introduced the traditional
-                  martial art of Kendo to our community. This marked the beginning of a transformative journey.
+                  In 2015, His Excellency Kaoru Yoshimura, the Japanese Ambassador to Ghana, played a pivotal role in introducing the traditional Japanese martial art of Kendo to the Ghanaian community. This initiative was part of a broader effort to promote cultural exchange and foster stronger ties between Japan and Ghana. 
                 </p>
                 <p>
-                  Kendo, meaning "the way of the sword," is rooted in centuries of samurai tradition. It emphasizes
-                  discipline, respect, and continuous self-improvement—values that resonate deeply across cultures.
+                  Kendo, often referred to as "the way of the sword," is a modern martial art deeply rooted in the traditions of the samurai. It emphasizes discipline, respect, and the pursuit of self-improvement, values that align closely with the philosophies underpinning Japanese culture.
                 </p>
               </div>
               <Button variant="link" asChild className="mt-8 px-0 gap-2 text-primary text-base group">
