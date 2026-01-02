@@ -53,12 +53,21 @@ export function Navigation() {
               About
             </Link>
 
+<<<<<<< HEAD
             <NavigationMenu viewport={false}>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Clubs</NavigationMenuTrigger>
                   <NavigationMenuContent className="!bg-background !text-foreground z-50">
                     <div className="w-[500px] p-6 bg-background text-foreground backdrop-blur-xl border border-primary/10 shadow-xl rounded-md">
+=======
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Clubs</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[500px] p-6 bg-card/95 backdrop-blur-xl border border-primary/10">
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                       <div className="grid grid-cols-2 gap-6">
                         <div>
                           <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
@@ -68,7 +77,11 @@ export function Navigation() {
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/first-blade"
+<<<<<<< HEAD
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+=======
+                                className="block text-sm hover:text-primary transition-colors"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                               >
                                 First Blade Kendo Dojo
                               </Link>
@@ -76,20 +89,32 @@ export function Navigation() {
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/great-sword"
+<<<<<<< HEAD
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+=======
+                                className="block text-sm hover:text-primary transition-colors"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                               >
                                 Great Sword - Sage Kendo Club
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
+<<<<<<< HEAD
                               <Link href="/clubs/datus" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
+=======
+                              <Link href="/clubs/datus" className="block text-sm hover:text-primary transition-colors">
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                                 Datus International School
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/milespotens"
+<<<<<<< HEAD
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+=======
+                                className="block text-sm hover:text-primary transition-colors"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                               >
                                 Milespotens Kendo Club
                               </Link>
@@ -97,13 +122,21 @@ export function Navigation() {
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/aviation"
+<<<<<<< HEAD
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+=======
+                                className="block text-sm hover:text-primary transition-colors"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                               >
                                 Aviation Social Center
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
+<<<<<<< HEAD
                               <Link href="/clubs/kensei" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
+=======
+                              <Link href="/clubs/kensei" className="block text-sm hover:text-primary transition-colors">
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                                 Kensei Kendo Dojo
                               </Link>
                             </NavigationMenuLink>
@@ -117,13 +150,21 @@ export function Navigation() {
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/ashanti-north"
+<<<<<<< HEAD
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+=======
+                                className="block text-sm hover:text-primary transition-colors"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                               >
                                 Ashanti North Kendo Club
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
+<<<<<<< HEAD
                               <Link href="/clubs/cove" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
+=======
+                              <Link href="/clubs/cove" className="block text-sm hover:text-primary transition-colors">
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
                                 Cove Kendo Club
                               </Link>
                             </NavigationMenuLink>

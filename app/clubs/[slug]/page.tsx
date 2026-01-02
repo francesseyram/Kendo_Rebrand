@@ -22,17 +22,27 @@ const clubsData: Record<
 > = {
   "first-blade": {
     name: "First Blade Kendo Dojo",
+<<<<<<< HEAD
     sensei: "SESI DZAKPASU",
     location: "First Blade Kendo Dojo, Nungua, 246 Beach Drive",
     trainingDays: "Sunday",
     trainingTime: "3.00pm – 6.00pm",
     email: "info@kendoghana.com",
     phone: "+233 266 000 201",
+=======
+    sensei: "Sensei Kwame Mensah",
+    location: "East Legon, Accra",
+    trainingDays: "Tuesday, Thursday, Saturday",
+    trainingTime: "6:00 PM - 8:00 PM",
+    email: "firstblade@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
     description:
       "First Blade Kendo Dojo is one of the founding clubs of the Ghana Kendo Federation. We offer comprehensive training for beginners and advanced practitioners in a supportive environment.",
   },
   "great-sword": {
     name: "Great Sword - Sage Kendo Club",
+<<<<<<< HEAD
     sensei: "RANDOLPH PHILIP DARKU",
     location: "Accra Sports Stadium",
     trainingDays: "Saturday",
@@ -100,6 +110,79 @@ const clubsData: Record<
     email: "info@kendoghana.com",
     phone: "+233574859545",
     description: "Training by appointment available",
+=======
+    sensei: "Sensei Ama Darko",
+    location: "Osu, Accra",
+    trainingDays: "Monday, Wednesday, Friday",
+    trainingTime: "5:30 PM - 7:30 PM",
+    email: "greatsword@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Great Sword - Sage Kendo Club focuses on traditional Kendo training with emphasis on form, discipline, and competitive excellence.",
+  },
+  datus: {
+    name: "Datus International School Kendo Club",
+    location: "Airport Residential Area, Accra",
+    trainingDays: "Wednesday, Friday",
+    trainingTime: "4:00 PM - 6:00 PM",
+    email: "datus@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Our school-based club introduces young students to the principles and practice of Kendo, building character and discipline from an early age.",
+  },
+  milespotens: {
+    name: "Milespotens Kendo Club",
+    sensei: "Sensei Yaw Boateng",
+    location: "Tema, Accra",
+    trainingDays: "Tuesday, Saturday",
+    trainingTime: "6:30 PM - 8:30 PM",
+    email: "milespotens@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Milespotens Kendo Club offers dedicated training in a modern facility, welcoming practitioners of all levels.",
+  },
+  aviation: {
+    name: "Aviation Social Center Kendo Club",
+    location: "Airport, Accra",
+    trainingDays: "Monday, Thursday",
+    trainingTime: "6:00 PM - 8:00 PM",
+    email: "aviation@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Located at the Aviation Social Center, our club provides excellent facilities and experienced instruction for Kendo enthusiasts.",
+  },
+  kensei: {
+    name: "Kensei Kendo Dojo",
+    sensei: "Sensei Akua Asante",
+    location: "Madina, Accra",
+    trainingDays: "Wednesday, Friday, Sunday",
+    trainingTime: "5:00 PM - 7:00 PM",
+    email: "kensei@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Kensei Kendo Dojo emphasizes the spiritual aspects of Kendo alongside technical proficiency, creating well-rounded practitioners.",
+  },
+  "ashanti-north": {
+    name: "Ashanti North Kendo Club",
+    sensei: "Sensei Kofi Owusu",
+    location: "Kumasi",
+    trainingDays: "Tuesday, Thursday, Saturday",
+    trainingTime: "6:00 PM - 8:00 PM",
+    email: "ashantinorth@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Serving the Ashanti region, our club brings quality Kendo instruction to Kumasi and surrounding areas.",
+  },
+  cove: {
+    name: "Cove Kendo Club",
+    location: "Kumasi",
+    trainingDays: "Monday, Wednesday, Friday",
+    trainingTime: "5:30 PM - 7:30 PM",
+    email: "cove@kendoghana.com",
+    phone: "+233 XX XXX XXXX",
+    description:
+      "Cove Kendo Club offers traditional Kendo training in a welcoming atmosphere for all ages and skill levels.",
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
   },
 }
 
@@ -125,6 +208,7 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
     notFound()
   }
 
+<<<<<<< HEAD
   // Map club slugs to their logo images
   const clubLogos: Record<string, string> = {
     "first-blade": "/logo_blade.jpg",
@@ -139,6 +223,8 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
 
   const clubImageSrc = clubLogos[slug] || `/kendo-dojo-training-.jpg?height=600&width=900&query=kendo+dojo+training+${club.name}`
 
+=======
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -156,11 +242,19 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <div className="lg:col-span-2">
               <Image
+<<<<<<< HEAD
                 src={clubImageSrc}
                 alt={club.name}
                 width={900}
                 height={600}
                 className="rounded-xl shadow-2xl w-full object-contain"
+=======
+                src={`/kendo-dojo-training-.jpg?height=600&width=900&query=kendo+dojo+training+${club.name}`}
+                alt={club.name}
+                width={900}
+                height={600}
+                className="rounded-xl shadow-2xl w-full"
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
               />
             </div>
 

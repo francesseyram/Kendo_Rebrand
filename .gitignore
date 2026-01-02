@@ -12,6 +12,10 @@ node_modules
 
 # Production
 /build
+<<<<<<< HEAD
+=======
+/dist
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
 
 # Misc
 .DS_Store
@@ -21,10 +25,21 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
 # Local env files
 .env*.local
 .env
+=======
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
 
 # Vercel
 .vercel
@@ -33,6 +48,27 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 # Lock files (keep only one)
 pnpm-lock.yaml
 yarn.lock
+=======
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+*.map
+.turbo
+>>>>>>> 604e8331dc6888eebdf3e73908b9235ecec41119
