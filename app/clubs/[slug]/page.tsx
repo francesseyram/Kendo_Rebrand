@@ -20,16 +20,16 @@ const clubsData: Record<
     description: string
   }
 > = {
-  "first-blade": {
-    name: "First Blade Kendo Dojo",
+  "nungua": {
+    name: "Nungua Kendo Dojo",
     sensei: "SESI DZAKPASU",
-    location: "First Blade Kendo Dojo, Nungua, 246 Beach Drive",
+    location: "Nungua Kendo Dojo, Nungua, 246 Beach Drive",
     trainingDays: "Sunday",
     trainingTime: "3.00pm – 6.00pm",
     email: "info@kendoghana.com",
     phone: "+233 266 000 201",
     description:
-      "First Blade Kendo Dojo is one of the founding clubs of the Ghana Kendo Federation. We offer comprehensive training for beginners and advanced practitioners in a supportive environment.",
+      "Nungua Kendo Dojo is one of the founding clubs of the Ghana Kendo Federation. We offer comprehensive training for beginners and advanced practitioners in a supportive environment.",
   },
   "great-sword": {
     name: "Great Sword - Sage Kendo Club",
@@ -49,16 +49,6 @@ const clubsData: Record<
     trainingTime: "3:00pm – 5:00pm (MWF), 9:00am – 12:00pm (Sat)",
     email: "info@kendoghana.com",
     phone: "+233553644551",
-    description: "Training by appointment available",
-  },
-  milespotens: {
-    name: "MilesPotens Kendo Club",
-    sensei: "Lord Ishaken",
-    location: "Ablekuma CP",
-    trainingDays: "Thursday",
-    trainingTime: "6:00pm – 7:00pm",
-    email: "info@kendoghana.com",
-    phone: "+233243957780",
     description: "Training by appointment available",
   },
   aviation: {
@@ -127,10 +117,9 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
 
   // Map club slugs to their logo images
   const clubLogos: Record<string, string> = {
-    "first-blade": "/logo_blade.jpg",
+    "nungua": "/nungua_logo.jpeg",
     "great-sword": "/logo_sword.jpg",
     datus: "/logo_datus.jpg",
-    milespotens: "/logo_miles.jpg",
     aviation: "/logo_aviation2.jpg",
     kensei: "/kenseilogo.png",
     "ashanti-north": "/ashanti_north.jpeg",
