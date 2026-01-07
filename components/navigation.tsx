@@ -38,7 +38,7 @@ export function Navigation() {
             className="flex items-center gap-3 text-xl font-bold tracking-tight hover:scale-105 transition-transform group"
           >
             <img
-              src="/kendo_logo.png"
+              src="/Logos/kendo_logo.png"
               alt="Ghana Kendo Federation Logo"
               className="h-8 w-8 object-contain"
             />

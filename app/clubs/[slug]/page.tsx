@@ -117,13 +117,13 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
 
   // Map club slugs to their logo images
   const clubLogos: Record<string, string> = {
-    "nungua": "/nungua_logo.jpeg",
-    "great-sword": "/logo_sword.jpg",
-    datus: "/logo_datus.jpg",
-    aviation: "/logo_aviation2.jpg",
-    kensei: "/kenseilogo.png",
-    "ashanti-north": "/ashanti_north.jpeg",
-    cove: "/cove_kendo.jpeg",
+    "nungua": "/Logos/nungua_logo.jpeg",
+    "great-sword": "/Logos/logo_sword.jpg",
+    datus: "/Logos/logo_datus.jpg",
+    aviation: "/Logos/logo_aviation2.jpg",
+    kensei: "/Logos/kenseilogo.png",
+    "ashanti-north": "/Logos/ashanti_north.jpeg",
+    cove: "/Logos/cove_kendo.jpeg",
   }
 
   const clubImageSrc = clubLogos[slug] || `/kendo-dojo-training-.jpg?height=600&width=900&query=kendo+dojo+training+${club.name}`

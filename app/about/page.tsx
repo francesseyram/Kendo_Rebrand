@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none">
           <div className="mb-12">
             <Image
-              src="/newpic3.jpeg"
+              src="/gallery_images/1st_national_inter_kendo/newpic3.jpeg"
               alt="Kendo training in Ghana"
               width={1200}
               height={600}

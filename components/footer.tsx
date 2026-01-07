@@ -12,7 +12,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/kendo_logo.png"
+                src="/Logos/kendo_logo.png"
                 alt="Ghana Kendo Federation Logo"
                 width={80}
                 height={56}

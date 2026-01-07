@@ -130,7 +130,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-16 w-16 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                   <Image
-                    src="/kendo_logo.png"
+                    src="/Logos/kendo_logo.png"
                     alt="Ghana Kendo Federation"
                     width={64}
                     height={64}
