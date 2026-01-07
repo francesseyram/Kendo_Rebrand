@@ -84,7 +84,7 @@ export function Footer() {
             <ul className="space-y-1 text-[#f5f5f5] text-base">
               <li>
                 <a
-                  href="/documents/calendar-2025.pdf"
+                  href="/Documents/Calendar - 2025.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors py-1 block"
@@ -94,7 +94,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/documents/ekf-grading-rules.pdf"
+                  href="/Documents/European Kendo Federation(EKF)grading rules.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors py-1 block"
@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/documents/constitution.pdf"
+                  href="/Documents/Ghana Kendo Federation -Constitution-updated - Dec-2024.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors py-1 block"
@@ -114,7 +114,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/documents/club-application-form.pdf"
+                  href="/Documents/kendo_application_form.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors py-1 block"

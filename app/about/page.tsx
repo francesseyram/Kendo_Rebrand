@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <div className="container mx-auto px-4 py-16 md:py-22 lg:py-24 max-w-6xl">
         <h1 className="text-5xl md:text-6xl font-bold mb-8 text-balance">
           About the Ghana Kendo Federation
         </h1>
@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none">
           <div className="mb-12">
             <Image
-              src="/kendo_4.jpg"
+              src="/newpic3.jpeg"
               alt="Kendo training in Ghana"
               width={1200}
               height={600}

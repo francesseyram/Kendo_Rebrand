@@ -8,8 +8,8 @@ import Link from "next/link"
 const events = [
   {
     id: 1,
-    title: "National Kendo-Ka Seminar",
-    date: "January 2025",
+    title: "Tunis International Open",
+    date: "28th - 30th November 2025",
     image: "/kendo-seminar-with-visiting-instructor.jpg",
   },
   {

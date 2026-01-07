@@ -9,10 +9,9 @@ const regions = [
   {
     name: "Greater Accra Regional Kendo Association",
     clubs: [
-      { name: "First Blade Kendo Dojo", slug: "first-blade" },
+      { name: "Nungua Kendo Dojo", slug: "nungua" },
       { name: "Great Sword - Sage Kendo Club", slug: "great-sword" },
       { name: "Datus International School Kendo Club", slug: "datus" },
-      { name: "Milespotens Kendo Club", slug: "milespotens" },
       { name: "Aviation Social Center Kendo Club", slug: "aviation" },
       { name: "Kensei Kendo Dojo", slug: "kensei" },
     ],

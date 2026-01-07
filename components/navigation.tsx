@@ -56,21 +56,25 @@ export function Navigation() {
             <NavigationMenu viewport={false}>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent">Clubs</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent">
+                    Clubs
+                  </NavigationMenuTrigger>
                   <NavigationMenuContent className="!bg-background !text-foreground z-50">
                     <div className="w-[500px] p-6 bg-background text-foreground backdrop-blur-xl border border-primary/10 shadow-xl rounded-md">
-                      <div className="grid grid-cols-2 gap-6">
-                        <div>
-                          <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                            Greater Accra
-                          </h4>
-                          <div className="space-y-2">
+                      <div className="flex gap-6">
+                        {/* Column 1 */}
+                        <div className="flex-1 flex flex-col gap-6">
+                          {/* Greater Accra */}
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                              Greater Accra
+                            </h4>
                             <NavigationMenuLink asChild>
                               <Link
-                                href="/clubs/first-blade"
+                                href="/clubs/nungua"
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
                               >
-                                First Blade Kendo Dojo
+                                Nungua Kendo Dojo
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
@@ -82,16 +86,11 @@ export function Navigation() {
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
-                              <Link href="/clubs/datus" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
-                                Datus International School
-                              </Link>
-                            </NavigationMenuLink>
-                            <NavigationMenuLink asChild>
                               <Link
-                                href="/clubs/milespotens"
+                                href="/clubs/datus"
                                 className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
                               >
-                                Milespotens Kendo Club
+                                Datus International School
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
@@ -103,17 +102,20 @@ export function Navigation() {
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
-                              <Link href="/clubs/kensei" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
+                              <Link
+                                href="/clubs/kensei"
+                                className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+                              >
                                 Kensei Kendo Dojo
                               </Link>
                             </NavigationMenuLink>
                           </div>
-                        </div>
-                        <div>
-                          <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-3">
-                            Ashanti Region
-                          </h4>
-                          <div className="space-y-2">
+
+                          {/* Ashanti Region */}
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                              Ashanti Region
+                            </h4>
                             <NavigationMenuLink asChild>
                               <Link
                                 href="/clubs/ashanti-north"
@@ -123,10 +125,40 @@ export function Navigation() {
                               </Link>
                             </NavigationMenuLink>
                             <NavigationMenuLink asChild>
-                              <Link href="/clubs/cove" className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded">
+                              <Link
+                                href="/clubs/cove"
+                                className="block text-sm text-foreground hover:text-foreground hover:bg-primary/20 transition-colors py-1 px-2 rounded"
+                              >
                                 Cove Kendo Club
                               </Link>
                             </NavigationMenuLink>
+                          </div>
+                        </div>
+
+                        {/* Column 2 */}
+                        <div className="flex-1 flex flex-col gap-6">
+                          {/* Volta Region */}
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                              Volta Region
+                            </h4>
+                            <p className="text-sm text-muted-foreground italic">Coming Soon</p>
+                          </div>
+
+                          {/* Central Region */}
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                              Central Region
+                            </h4>
+                            <p className="text-sm text-muted-foreground italic">Coming Soon</p>
+                          </div>
+
+                          {/* Eastern Region */}
+                          <div className="flex flex-col gap-2">
+                            <h4 className="text-xs font-semibold uppercase tracking-wider text-primary mb-2">
+                              Eastern Region
+                            </h4>
+                            <p className="text-sm text-muted-foreground italic">Coming Soon</p>
                           </div>
                         </div>
                       </div>
