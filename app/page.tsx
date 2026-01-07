@@ -130,6 +130,8 @@ export default function Home() {
                 alt="Introduction of Kendo to Ghana"
                 fill
                 className="object-cover rounded-xl relative z-10 group-hover:scale-[1.02] transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
               {/* Corner accents */}
               <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/50" />

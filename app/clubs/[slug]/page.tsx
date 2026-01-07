@@ -161,6 +161,8 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
                 width={900}
                 height={600}
                 className="rounded-xl shadow-2xl w-full object-contain"
+                priority
+                sizes="(max-width: 1024px) 100vw, 66vw"
               />
             </div>
 

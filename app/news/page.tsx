@@ -51,23 +51,28 @@ const events = [
 ]
 
 const newsLinks = [
-  {
+  { 
     id: 1,
+    title: "The National Seniors Kendo Challenge!! Excerpts of Strength and Honour", 
+    url: "https://web.facebook.com/61571301195088/videos/1337358874447072/?rdid=cPLUWiLL4rcazUso#"
+  },
+  {
+    id: 2,
     title: "Ghana Kendo Federation Announces National Team Selection",
     url: "https://obusports.org/2025/07/12/ghana-kendo-federation-announces-national-team-selection/",
   },
   {
-    id: 2,
+    id: 3,
     title: "1st National Inter-Club Kendo Championships",
     url: "https://youtu.be/ArRtLgqO7VY?si=KADfwEp0F9UudfJI",
   },
   {
-    id: 3,
+    id: 4,
     title: "Japanese Ambassador Kendo Championship Hosts 5th Edition",
     url: "https://obusports.org/2025/03/16/japanese-ambassador-kendo-championship-hosts-5th-edition/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Ghana Kendo Federation Hosts Referees Seminar to Enhance Officiating",
     url: "https://obusports.org/2025/04/07/ghana-kendo-association-hosts-referees-seminar-to-enhance-officiating/",
   },
@@ -105,13 +110,15 @@ export default function NewsPage() {
                   key={event.id}
                   className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-[4/3]">
                     <Image
                       src={event.image || "/placeholder.svg"}
                       alt={event.title}
                       width={400}
                       height={300}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading={event.id <= 3 ? "eager" : "lazy"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>

@@ -122,6 +122,8 @@ export default function GalleryPage() {
                         alt={image.alt}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading={index === 0 && imgIndex < 2 ? "eager" : "lazy"}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
