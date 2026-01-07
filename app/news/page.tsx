@@ -8,46 +8,77 @@ import Link from "next/link"
 const events = [
   {
     id: 1,
-    title: "Tunis International Open",
-    date: "28th - 30th November 2025",
-    image: "/kendo-seminar-with-visiting-instructor.jpg",
+    title: "Two Days Intensive Seminar",
+    date: "13th and 14th December 2025",
+    image: "/news/intensive_seminar.jpeg",
   },
   {
     id: 2,
-    title: "Japanese Ambassador Championship",
-    date: "March 2025",
-    image: "/kendo-tournament-competition.jpg",
+    title: "Tunis International Open",
+    date: "28th - 30th November 2025",
+    image: "/news/tunis.jpeg",
   },
   {
     id: 3,
-    title: "National Kendo Referees Seminar",
-    date: "May 2025",
-    image: "/kendo-tournament-match-with-referee.jpg",
+    title: "Japan Ambassador's Championship",
+    date: "November 2025",
+    image: "/news/japan_ambassadors.jpeg",
   },
+  
   {
     id: 4,
-    title: "1st National Inter-Club Kendo Championships",
-    date: "June 2025",
-    image: "/kendo-championship-trophy-presentation.jpg",
+    title: "22nd Yosakoi Japan Festival",
+    date: "November 2025",
+    image: "/news/yosakoi.jpeg",
   },
   {
     id: 5,
-    title: "National Kendo Senior Challenge",
-    date: "August 2025",
-    image: "/kendo-participants-group-photo-at-event.jpg",
+    title: "National Team Training",
+    date: "Sept, Oct, Nov 2025",
+    image: "/news/team_training.jpeg",
   },
   {
     id: 6,
-    title: "National Team Training",
-    date: "Ongoing",
-    image: "/kendo-training-session-with-practitioners-in-bogu-.jpg",
+    title: "National Kendo Senior Challenge",
+    date: "August 2025",
+    image: "/news/kendo_seniors_challenge.jpg",
   },
+  
   {
     id: 7,
     title: "National Kendo Seniors Challenge Registered Players",
-    date: "2025",
-    image: "/kendo-club-members-celebrating-together.jpg",
+    date: "August 2025",
+    image: "/news/kendo_seniors_players.jpeg",
   },
+  {
+    id: 8,
+    title: "First National Inter-Club Kendo Championships",
+    date: "June 2025",
+    image: "/news/inter_club.jpg",
+  },
+  {
+    id: 9,
+    title: "National Kendo Referees Seminar",
+    date: "May 2025",
+    image: "/news/referees_seminar.jpg",
+  },
+  
+  {
+    id: 10,
+    title: "Japanese Ambassador Championship",
+    date: "March 2025",
+    image: "/news/japanese_ambassador.jpg",
+  },
+  {
+    id: 11,
+    title: "National Kendo-Ka Seminar",
+    date: "January 2025",
+    image: "/news/kendo_ka.jpg",
+  },
+  
+  
+  
+  
 ]
 
 const newsLinks = [
@@ -89,7 +120,7 @@ export default function NewsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-b from-background via-background/95 to-background py-32 md:py-40">
+      <div className="relative bg-gradient-to-b from-background via-background/95 to-background py-20 md:py-24">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
@@ -100,8 +131,10 @@ export default function NewsPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
+      {/* Content */}
+      <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          
           {/* Main Content - Events Grid */}
           <div className="lg:col-span-3">
             <div className="grid md:grid-cols-3 gap-6">
@@ -110,17 +143,15 @@ export default function NewsPage() {
                   key={event.id}
                   className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="relative overflow-hidden aspect-[4/3]">
+                  <div className="relative bg-black/40 aspect-[3/4] flex items-center justify-center">
                     <Image
                       src={event.image || "/placeholder.svg"}
                       alt={event.title}
                       width={400}
-                      height={300}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading={event.id <= 3 ? "eager" : "lazy"}
+                      height={600}
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
@@ -156,10 +187,9 @@ export default function NewsPage() {
                     className="group block"
                   >
                     <div className="relative p-4 rounded-lg border border-border bg-card hover:bg-gradient-to-br hover:from-accent/30 hover:to-accent/10 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
-                      {/* Shimmer effect on hover */}
+                      
                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                       
-                      {/* Number badge */}
                       <div className="absolute top-2 right-2 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                         {index + 1}
                       </div>
@@ -167,7 +197,7 @@ export default function NewsPage() {
                       <div className="flex items-start gap-3 relative z-10">
                         <div className="flex-shrink-0 mt-0.5">
                           <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                            <ExternalLink className="h-4 w-4 text-primary group-hover:scale-110 transition-transform" />
+                            <ExternalLink className="h-4 w-4 text-primary" />
                           </div>
                         </div>
                         <div className="flex-1 min-w-0 pr-6">
@@ -176,11 +206,9 @@ export default function NewsPage() {
                           </p>
                         </div>
                       </div>
-                      
-                      {/* Animated underline on hover */}
+
                       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-primary/80 to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                       
-                      {/* Corner accent */}
                       <div className="absolute top-0 right-0 w-12 h-12 bg-primary/5 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </Link>
