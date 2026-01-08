@@ -3,7 +3,88 @@ import { Footer } from "@/components/footer"
 import Image from "next/image"
 
 export default function GalleryPage() {
-  const galleries = [
+  const galleries = [{
+    title: "Tunis International Open",
+    images: [
+      {
+        src: "/gallery_images/tunisia/kendo_4.jpeg",
+        alt: "Tunis International Open - Image 4",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_5.jpeg",
+        alt: "Tunis International Open - Image 5",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_6.jpeg",
+        alt: "Tunis International Open - Image 6",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_7.jpeg",
+        alt: "Tunis International Open - Image 7",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_8.jpeg",
+        alt: "Tunis International Open - Image 8",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_9.jpeg",
+        alt: "Tunis International Open - Image 9",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_10.jpeg",
+        alt: "Tunis International Open - Image 10",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_11.jpeg",
+        alt: "Tunis International Open - Image 11",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_12.jpeg",
+        alt: "Tunis International Open - Image 12",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_13.jpeg",
+        alt: "Tunis International Open - Image 13",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_14.jpeg",
+        alt: "Tunis International Open - Image 14",
+      },
+      {
+        src: "/gallery_images/tunisia/kendo_15.jpeg",
+        alt: "Tunis International Open - Image 15",
+      },
+    ],
+  },
+    {
+      title: "Saturday Training Sessions",
+      images: [
+        {
+          src: "/gallery_images/saturday_training/practice_1.jpeg",
+          alt: "Saturday Training Session - Practice 1",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_2.jpeg",
+          alt: "Saturday Training Session - Practice 2",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_3.jpeg",
+          alt: "Saturday Training Session - Practice 3",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_4.jpeg",
+          alt: "Saturday Training Session - Practice 4",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_5.jpeg",
+          alt: "Saturday Training Session - Practice 5",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_6.jpeg",
+          alt: "Saturday Training Session - Practice 6",
+        },
+      ],
+    },
     {
       title: "1st National Inter-Club Kendo Championships",
       images: [
@@ -173,88 +254,6 @@ export default function GalleryPage() {
         {
           src: "/gallery_images/GKF_referee_seminar/kendo_32.jpg",
           alt: "GKF Referee Seminar - Image 32",
-        },
-      ],
-    },
-    {
-      title: "Saturday Training Sessions",
-      images: [
-        {
-          src: "/gallery_images/saturday_training/practice_1.jpeg",
-          alt: "Saturday Training Session - Practice 1",
-        },
-        {
-          src: "/gallery_images/saturday_training/practice_2.jpeg",
-          alt: "Saturday Training Session - Practice 2",
-        },
-        {
-          src: "/gallery_images/saturday_training/practice_3.jpeg",
-          alt: "Saturday Training Session - Practice 3",
-        },
-        {
-          src: "/gallery_images/saturday_training/practice_4.jpeg",
-          alt: "Saturday Training Session - Practice 4",
-        },
-        {
-          src: "/gallery_images/saturday_training/practice_5.jpeg",
-          alt: "Saturday Training Session - Practice 5",
-        },
-        {
-          src: "/gallery_images/saturday_training/practice_6.jpeg",
-          alt: "Saturday Training Session - Practice 6",
-        },
-      ],
-    },
-    {
-      title: "Tunis International Open",
-      images: [
-        {
-          src: "/gallery_images/tunisia/kendo_4.jpeg",
-          alt: "Tunis International Open - Image 4",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_5.jpeg",
-          alt: "Tunis International Open - Image 5",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_6.jpeg",
-          alt: "Tunis International Open - Image 6",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_7.jpeg",
-          alt: "Tunis International Open - Image 7",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_8.jpeg",
-          alt: "Tunis International Open - Image 8",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_9.jpeg",
-          alt: "Tunis International Open - Image 9",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_10.jpeg",
-          alt: "Tunis International Open - Image 10",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_11.jpeg",
-          alt: "Tunis International Open - Image 11",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_12.jpeg",
-          alt: "Tunis International Open - Image 12",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_13.jpeg",
-          alt: "Tunis International Open - Image 13",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_14.jpeg",
-          alt: "Tunis International Open - Image 14",
-        },
-        {
-          src: "/gallery_images/tunisia/kendo_15.jpeg",
-          alt: "Tunis International Open - Image 15",
         },
       ],
     },
