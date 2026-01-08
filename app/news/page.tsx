@@ -38,9 +38,9 @@ const events = [
     title: "Two Days Intensive Seminar",
     date: "13th and 14th December 2025",
     image: "/news/intensive_seminar.jpeg",
-    status: "upcoming",
+    status: "completed",
     type: "seminar",
-    featured: true,
+    featured: false,
   },
   {
     id: 2,
@@ -177,17 +177,17 @@ export default function NewsPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-b from-background via-background/95 to-background py-20 md:py-24">
-        <div className="container mx-auto px-4 relative z-10">
+      <div className="relative bg-gradient-to-b from-background via-background/95 to-background py-16 sm:py-20 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground"
               data-aos="fade-up"
             >
               News / Events
             </h1>
             <div
-              className="w-40 h-0.5 bg-primary mx-auto"
+              className="w-32 sm:w-40 h-0.5 bg-primary mx-auto"
               data-aos="fade-up"
               data-aos-delay="150"
             />
@@ -196,18 +196,18 @@ export default function NewsPage() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
           
           {/* Main Content - Events Grid */}
           <div className="lg:col-span-3">
             {/* Featured Event */}
             {featuredEvent && (
               <Card
-                className="mb-10 overflow-hidden grid md:grid-cols-2 group hover:shadow-xl transition-all duration-300"
+                className="mb-6 sm:mb-10 overflow-hidden grid grid-cols-1 md:grid-cols-2 group hover:shadow-xl transition-all duration-300"
                 data-aos="zoom-in"
               >
-                <div className="relative h-full min-h-[300px] md:min-h-0">
+                <div className="relative h-full min-h-[250px] sm:min-h-[300px] md:min-h-0">
                   <Image
                     src={featuredEvent.image}
                     alt={featuredEvent.title}
@@ -215,28 +215,28 @@ export default function NewsPage() {
                     height={500}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-black/60 text-white backdrop-blur">
+                  <span className="absolute top-2 left-2 sm:top-3 sm:left-3 px-2 sm:px-3 py-1 text-xs font-semibold rounded-full bg-black/60 text-white backdrop-blur">
                     {getStatusLabel(featuredEvent.status)}
                   </span>
                 </div>
-                <div className="p-8 flex flex-col justify-center">
-                  <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                  <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wide">
                     Featured Event
                   </span>
-                  <h2 className="text-3xl font-bold mt-3 text-foreground">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mt-2 sm:mt-3 text-foreground">
                     {featuredEvent.title}
                   </h2>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                  <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                     A historic milestone marking Ghana's first nationwide Kendo championship,
                     bringing together clubs, referees, and national selectors.
                   </p>
-                  <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
+                  <div className="mt-4 sm:mt-6 flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                    <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
                     {featuredEvent.date}
                   </div>
                   <Link
                     href="/about#timeline"
-                    className="mt-6 text-xs text-primary underline hover:text-primary/80 transition-colors inline-block"
+                    className="mt-4 sm:mt-6 text-xs text-primary underline hover:text-primary/80 transition-colors inline-block"
                   >
                     View in Federation Timeline →
                   </Link>
@@ -245,7 +245,7 @@ export default function NewsPage() {
             )}
 
             {/* Regular Events Grid */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {regularEvents.map((event, index) => (
                 <Card
                   key={event.id}
@@ -271,18 +271,18 @@ export default function NewsPage() {
                       {getStatusLabel(event.status)}
                     </span>
                   </div>
-                  <div className="p-5">
+                  <div className="p-4 sm:p-5">
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                      <Calendar className="h-3 w-3" />
-                      {event.date}
+                      <Calendar className="h-3 w-3 flex-shrink-0" />
+                      <span className="truncate">{event.date}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
                       {event.title}
                     </h3>
                     {event.type === "championship" && (
                       <Link
                         href="/about#timeline"
-                        className="mt-3 text-xs text-primary underline hover:text-primary/80 transition-colors inline-block"
+                        className="mt-2 sm:mt-3 text-xs text-primary underline hover:text-primary/80 transition-colors inline-block"
                       >
                         View in Timeline →
                       </Link>
@@ -294,16 +294,16 @@ export default function NewsPage() {
           </div>
 
           {/* Sidebar - Press Coverage */}
-          <div className="lg:col-span-1">
-            <Card className="p-6 sticky top-24">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Newspaper className="h-5 w-5 text-primary" />
+          <div className="lg:col-span-1 order-first lg:order-last">
+            <Card className="p-4 sm:p-6 sticky top-20 sm:top-24">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="h-8 w-8 sm:h-10 sm:w-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Newspaper className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 </div>
-                <h2 className="text-2xl font-bold">Press Coverage</h2>
+                <h2 className="text-xl sm:text-2xl font-bold">Press Coverage</h2>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {newsLinks.map((news, index) => (
                   <Link
                     key={news.id}
@@ -314,7 +314,7 @@ export default function NewsPage() {
                     data-aos="fade-left"
                     data-aos-delay={index * 100}
                   >
-                    <div className="relative p-4 rounded-lg border border-border bg-card hover:bg-gradient-to-br hover:from-accent/30 hover:to-accent/10 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
+                    <div className="relative p-3 sm:p-4 rounded-lg border border-border bg-card hover:bg-gradient-to-br hover:from-accent/30 hover:to-accent/10 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 overflow-hidden">
                       
                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                       
@@ -328,11 +328,11 @@ export default function NewsPage() {
                             <ExternalLink className="h-4 w-4 text-primary" />
                           </div>
                         </div>
-                        <div className="flex-1 min-w-0 pr-6">
+                        <div className="flex-1 min-w-0 pr-4 sm:pr-6">
                           <span className="text-xs text-muted-foreground block mb-1">
                             External Media
                           </span>
-                          <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-all duration-300 leading-relaxed group-hover:translate-x-1">
+                          <p className="text-xs sm:text-sm font-semibold text-foreground group-hover:text-primary transition-all duration-300 leading-relaxed group-hover:translate-x-1 line-clamp-2">
                             {news.title}
                           </p>
                         </div>

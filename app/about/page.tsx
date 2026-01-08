@@ -14,7 +14,7 @@ export default function AboutPage() {
 
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-24 overflow-hidden">
+        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden">
           {/* Subtle grid background */}
           <div
             className="absolute inset-0 opacity-[0.04]"
@@ -25,17 +25,17 @@ export default function AboutPage() {
             }}
           />
 
-          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
             <div className="max-w-3xl">
-              <span className="inline-block mb-6 px-4 py-2 rounded-full glass border border-primary/20 text-xs uppercase tracking-widest text-primary">
+              <span className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass border border-primary/20 text-xs uppercase tracking-widest text-primary">
                 About Us
               </span>
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-gradient">
                 The Way of the Sword in Ghana
               </h1>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 The Ghana Kendo Federation is the national body dedicated to preserving,
                 developing, and representing the spirit and discipline of Kendo in Ghana.
               </p>
@@ -43,9 +43,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           {/* Statement Image */}
-          <div className="relative mb-20">
+          <div className="relative mb-12 sm:mb-16 md:mb-20">
             <Image
               src="/gallery_images/1st_national_inter_kendo/newpic3.jpeg"
               alt="Kendo training in Ghana"
@@ -56,12 +56,12 @@ export default function AboutPage() {
 
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-            <p className="absolute bottom-6 left-6 text-sm text-white/80 max-w-md">
+            <p className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-xs sm:text-sm text-white/80 max-w-xs sm:max-w-md">
               Discipline. Respect. Continuous self-improvement.
             </p>
           </div>
 
-          <div className="space-y-24 pb-20">
+          <div className="space-y-16 sm:space-y-20 md:space-y-24 pb-12 sm:pb-16 md:pb-20">
 
             {/* About the Federation */}
             <section className="space-y-6">
@@ -92,15 +92,15 @@ export default function AboutPage() {
             </section>
 
             {/* History & Milestones */}
-            <section className="space-y-6 mt-24">
+            <section className="space-y-4 sm:space-y-6 mt-12 sm:mt-16 md:mt-24">
               <h2
-                className="text-3xl lg:text-4xl font-bold text-gradient mb-6"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient mb-4 sm:mb-6"
                 data-aos="fade-up"
               >
                 History & Milestones
               </h2>
               <p
-                className="text-lg text-muted-foreground leading-relaxed"
+                className="text-base sm:text-lg text-muted-foreground leading-relaxed"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 the journey of Kendo in Ghana has been marked by significant milestones and achievements.
               </p>
 
-              <div className="relative border-l border-primary/30 pl-10 space-y-16 mt-12">
+              <div className="relative border-l border-primary/30 pl-6 sm:pl-8 md:pl-10 space-y-10 sm:space-y-12 md:space-y-16 mt-8 sm:mt-10 md:mt-12">
                 {[
                   {
                     year: "2015",
@@ -158,14 +158,14 @@ export default function AboutPage() {
                     className="relative"
                   >
                     {/* Timeline Dot */}
-                    <span className="absolute -left-[46px] top-1 w-4 h-4 rounded-full bg-primary shadow-md shadow-primary/40" />
+                    <span className="absolute -left-[38px] sm:-left-[46px] top-1 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-primary shadow-md shadow-primary/40" />
 
                     {/* Content Card */}
-                    <div className="glass rounded-2xl p-6 border border-primary/20 hover:border-primary/40 transition-all">
-                      <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+                    <div className="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-primary/20 hover:border-primary/40 transition-all">
+                      <span className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-primary">
                         {item.year}
                       </span>
-                      <p className="mt-3 text-muted-foreground leading-relaxed">
+                      <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
                         {item.text}
                       </p>
                     </div>
@@ -175,9 +175,9 @@ export default function AboutPage() {
             </section>
 
             {/* Objectives & Mandate */}
-            <section className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gradient">Objectives & Mandate</h2>
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <section className="space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient">Objectives & Mandate</h2>
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
                 {[
                   "Foster and develop the practice and ethos of Kendo while organizing and regulating its activities both nationally and internationally.",
                   "Represent Ghana at international Kendo events and oversee the promotion of members to higher ranks.",
@@ -217,9 +217,9 @@ export default function AboutPage() {
             </section>
 
             {/* Governance */}
-            <section className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gradient">Governance</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <section className="space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gradient">Governance</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
                 {[
                   ["President & Acting Secretary", "Sesinam Don Dzakpasu"],
                   ["Vice President", "Dickson Enam Kwame Acolatse"],
@@ -232,10 +232,10 @@ export default function AboutPage() {
                 ].map(([role, name]) => (
                   <div
                     key={name}
-                    className="glass rounded-2xl p-6 border border-primary/20"
+                    className="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-primary/20"
                   >
-                    <p className="text-sm text-primary uppercase tracking-wide">{role}</p>
-                    <p className="mt-2 font-medium">{name}</p>
+                    <p className="text-xs sm:text-sm text-primary uppercase tracking-wide">{role}</p>
+                    <p className="mt-1.5 sm:mt-2 text-sm sm:text-base font-medium">{name}</p>
                   </div>
                 ))}
               </div>

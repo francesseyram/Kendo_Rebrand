@@ -43,7 +43,7 @@ export function GalleryMasonry({ images }: GalleryMasonryProps) {
   return (
     <>
       {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6 space-y-4 sm:space-y-6">
         {images.map((img, i) => (
           <div
             key={i}
@@ -56,6 +56,8 @@ export function GalleryMasonry({ images }: GalleryMasonryProps) {
               width={800}
               height={600}
               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              loading={i < 6 ? "eager" : "lazy"}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
 
             {/* Overlay */}
@@ -75,46 +77,51 @@ export function GalleryMasonry({ images }: GalleryMasonryProps) {
           {/* Close */}
           <button
             onClick={close}
-            className="absolute top-6 right-6 text-white/70 hover:text-white"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white transition-colors z-10 p-2"
+            aria-label="Close lightbox"
           >
-            <X size={28} />
+            <X size={24} className="sm:w-7 sm:h-7" />
           </button>
 
           {/* Prev */}
           <button
             onClick={prev}
             className={clsx(
-              "absolute left-6 text-white/70 hover:text-white",
+              "absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 p-2",
               activeIndex === 0 && "opacity-30 pointer-events-none"
             )}
+            aria-label="Previous image"
           >
-            <ChevronLeft size={36} />
+            <ChevronLeft size={32} className="sm:w-9 sm:h-9" />
           </button>
 
           {/* Next */}
           <button
             onClick={next}
             className={clsx(
-              "absolute right-6 text-white/70 hover:text-white",
+              "absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 p-2",
               activeIndex === images.length - 1 &&
                 "opacity-30 pointer-events-none"
             )}
+            aria-label="Next image"
           >
-            <ChevronRight size={36} />
+            <ChevronRight size={32} className="sm:w-9 sm:h-9" />
           </button>
 
           {/* Image */}
-          <div className="max-w-5xl w-full px-6">
+          <div className="max-w-5xl w-full px-4 sm:px-6">
             <Image
               src={images[activeIndex].src}
               alt={images[activeIndex].alt}
               width={1600}
               height={1000}
-              className="w-full h-auto rounded-xl object-contain"
+              className="w-full h-auto rounded-xl object-contain max-h-[85vh]"
+              priority
+              sizes="(max-width: 768px) 100vw, 90vw"
             />
 
             {/* Caption */}
-            <p className="mt-4 text-center text-sm text-white/70">
+            <p className="mt-4 text-center text-xs sm:text-sm text-white/70 px-4">
               {images[activeIndex].alt}
             </p>
           </div>

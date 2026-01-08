@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="bg-[#040404] text-[#f2f2f2]">
       {/* Main Footer Section */}
-      <div className="container mx-auto px-6 lg:px-12 py-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Column 1: Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 mb-4">
@@ -18,19 +18,19 @@ export function Footer() {
                 height={56}
                 className="object-contain"
               />
-              <div className="text-[#f9f8f8] text-[26px] font-bold leading-tight">
+              <div className="text-[#f9f8f8] text-lg sm:text-xl md:text-[26px] font-bold leading-tight">
                 Ghana Kendo Federation
               </div>
             </Link>
-            <p className="text-[#f2f2f2] text-sm leading-relaxed">
+            <p className="text-[#f2f2f2] text-xs sm:text-sm leading-relaxed">
               The Ghana Kendo Federation (GKF) was established in 2024 as a non-profit organization dedicated to promoting the practice and spirit of Kendo in alignment with its traditional values.
             </p>
           </div>
 
           {/* Column 2: Useful Links */}
           <div className="space-y-4">
-            <h5 className="text-[#f9f8f8] text-base font-semibold mb-4">Useful Links</h5>
-            <ul className="space-y-1 text-[#f5f5f5] text-base">
+            <h5 className="text-[#f9f8f8] text-sm sm:text-base font-semibold mb-3 sm:mb-4">Useful Links</h5>
+            <ul className="space-y-1 text-[#f5f5f5] text-sm sm:text-base">
               <li>
                 <Link href="/" className="hover:text-white transition-colors py-1 block">
                   Home
@@ -61,8 +61,8 @@ export function Footer() {
 
           {/* Column 3: Contact Info */}
           <div className="space-y-4">
-            <h5 className="text-[#f9f8f8] text-base font-semibold mb-4">Contact Info</h5>
-            <div className="space-y-3 text-[#cfd1d2] text-base">
+            <h5 className="text-[#f9f8f8] text-sm sm:text-base font-semibold mb-3 sm:mb-4">Contact Info</h5>
+            <div className="space-y-2 sm:space-y-3 text-[#cfd1d2] text-sm sm:text-base">
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-[#f5f5f5] mt-0.5 flex-shrink-0" />
                 <span>+233 266 000 201</span>
@@ -80,8 +80,8 @@ export function Footer() {
 
           {/* Column 4: Documents */}
           <div className="space-y-4">
-            <h5 className="text-[#f9f8f8] text-base font-semibold mb-4">Documents</h5>
-            <ul className="space-y-1 text-[#f5f5f5] text-base">
+            <h5 className="text-[#f9f8f8] text-sm sm:text-base font-semibold mb-3 sm:mb-4">Documents</h5>
+            <ul className="space-y-1 text-[#f5f5f5] text-sm sm:text-base">
               <li>
                 <a
                   href="/Documents/Calendar - 2025.pdf"
@@ -128,11 +128,11 @@ export function Footer() {
       </div>
 
       {/* Bottom Footer Section */}
-      <div className="bg-[#3A4153] py-6">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="bg-[#3A4153] py-4 sm:py-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
             {/* Copyright */}
-            <div className="text-[#171515] text-sm font-semibold text-center md:text-left">
+            <div className="text-[#171515] text-xs sm:text-sm font-semibold text-center md:text-left">
               <Link href="/" className="hover:text-white transition-colors">
                 © {new Date().getFullYear()} Ghana Kendo Federation. All Rights Reserved.
               </Link>

@@ -21,29 +21,38 @@ export function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
+    // Check initial scroll position
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Determine if navbar should have solid background
+  // Always solid when mobile menu is open, or when scrolled
+  const shouldShowSolid = mobileMenuOpen || scrolled
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass border-b border-primary/20 shadow-2xl shadow-primary/5" : "bg-transparent"
+        shouldShowSolid ? "glass border-b border-primary/20 shadow-2xl shadow-primary/5" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <Link
             href="/"
-            className="flex items-center gap-3 text-xl font-bold tracking-tight hover:scale-105 transition-transform group"
+            className="flex items-center gap-2 sm:gap-3 text-base sm:text-xl font-bold tracking-tight hover:scale-105 transition-transform group"
           >
             <img
               src="/Logos/kendo_logo.png"
               alt="Ghana Kendo Federation Logo"
-              className="h-8 w-8 object-contain"
+              className="h-6 w-6 sm:h-8 sm:w-8 object-contain"
             />
-            <span className="text-foreground group-hover:text-gradient transition-all">
+            <span className="text-foreground group-hover:text-gradient transition-all hidden sm:inline">
               Ghana Kendo Federation
+            </span>
+            <span className="text-foreground group-hover:text-gradient transition-all sm:hidden">
+              GKF
             </span>
           </Link>
 
@@ -200,52 +209,52 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-6 space-y-4 border-t border-primary/20">
+          <div className="lg:hidden py-6 space-y-3 sm:space-y-4 border-t border-primary/20 px-4 sm:px-0">
             <Link
               href="/about"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/clubs"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Clubs
             </Link>
             <Link
               href="/news"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               News
             </Link>
             <Link
               href="/gallery"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link
               href="/shop"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Shop
             </Link>
             <Link
               href="/resources"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Resources
             </Link>
             <Link
               href="/contact"
-              className="block text-lg hover:text-foreground/80 transition-colors"
+              className="block text-base sm:text-lg hover:text-foreground/80 transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

@@ -1,10 +1,18 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { GalleryMasonry } from "@/components/gallery/gallery-masonry"
+import { JumpNavigator } from "@/components/gallery/jump-navigator"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function GalleryPage() {
   const galleries = [{
     title: "Tunis International Open",
+    date: "November 28-30, 2025",
+    location: "Tunis, Tunisia",
+    description: "Ghana's national team competing on the international stage, building exposure and experience in global Kendo competition.",
+    signatureImage: 0,
+    signatureQuote: "Discipline meets opportunity on the world stage.",
     images: [
       {
         src: "/gallery_images/tunisia/kendo_4.jpeg",
@@ -58,6 +66,11 @@ export default function GalleryPage() {
   },
     {
       title: "Saturday Training Sessions",
+      date: "Ongoing",
+      location: "Various Dojos, Ghana",
+      description: "Regular training sessions building technique, discipline, and community bonds among practitioners.",
+      signatureImage: 2,
+      signatureQuote: "Consistent practice is the foundation of mastery.",
       images: [
         {
           src: "/gallery_images/saturday_training/practice_1.jpeg",
@@ -87,6 +100,11 @@ export default function GalleryPage() {
     },
     {
       title: "1st National Inter-Club Kendo Championships",
+      date: "June 28, 2025",
+      location: "Accra Sports Stadium, Ghana",
+      description: "A historic milestone marking Ghana's first nationwide Kendo championship, bringing together clubs, referees, and national selectors.",
+      signatureImage: 7,
+      signatureQuote: "Final Match – Accra, 2024. Discipline, spirit, unity.",
       images: [
         {
           src: "/gallery_images/1st_national_inter_kendo/newpic1.jpeg",
@@ -124,6 +142,11 @@ export default function GalleryPage() {
     },
     {
       title: "4th Japanese Ambassador Championship",
+      date: "March 2025",
+      location: "Accra, Ghana",
+      description: "Reinforcing cultural and diplomatic ties while offering competition experience to Ghanaian kenshi.",
+      signatureImage: 0,
+      signatureQuote: "Cultural exchange through the way of the sword.",
       images: [
         {
           src: "/gallery_images/4th_japanese_ambassador/kendo_1.jpg",
@@ -177,6 +200,11 @@ export default function GalleryPage() {
     },
     {
       title: "5th Japanese Ambassador Championship",
+      date: "November 2025",
+      location: "Accra, Ghana",
+      description: "Continuing the tradition of Japanese-Ghanaian cultural exchange through competitive Kendo.",
+      signatureImage: 0,
+      signatureQuote: "Building bridges through martial excellence.",
       images: [
         {
           src: "/gallery_images/5th_japanese_ambasador/kendo_13.jpg",
@@ -230,6 +258,11 @@ export default function GalleryPage() {
     },
     {
       title: "Ghana Kendo Federation Referee Seminar",
+      date: "May 2025",
+      location: "Accra, Ghana",
+      description: "Strengthening officiating standards and enhancing competitive structure within the federation.",
+      signatureImage: 0,
+      signatureQuote: "Excellence in officiating ensures fairness in competition.",
       images: [
         {
           src: "/gallery_images/GKF_referee_seminar/kendo_25.jpg",
@@ -264,7 +297,7 @@ export default function GalleryPage() {
       <Navigation />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6 lg:px-12 overflow-hidden">
+        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-12 overflow-hidden">
           {/* Grid background pattern */}
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -279,10 +312,10 @@ export default function GalleryPage() {
               <div className="inline-block mb-6 px-4 py-2 rounded-full glass border border-primary/20 animate-pulse-glow">
                 <span className="text-xs font-semibold uppercase tracking-wider text-primary">Gallery</span>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-balance text-gradient">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-balance text-gradient">
                 Moments in the Way of the Sword
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-pretty">
                 Explore our collection of memorable moments, training sessions, tournaments, and community events that
                 showcase the spirit of Kendo in Ghana.
               </p>
@@ -291,19 +324,88 @@ export default function GalleryPage() {
         </section>
 
         {/* Gallery Sections */}
-        <section className="py-20 px-6 lg:px-12">
-          <div className="container mx-auto space-y-32">
-            {galleries.map((gallery, index) => (
-              <div key={index} className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gradient">{gallery.title}</h2>
-                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-                </div>
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-12 relative">
+          {/* Floating Jump Navigator */}
+          <JumpNavigator galleries={galleries} />
 
-                <GalleryMasonry images={gallery.images} />
-              </div>
-            ))}
+          <div className="container mx-auto space-y-20 sm:space-y-24 md:space-y-32">
+            {galleries.map((gallery, index) => {
+              const signatureImg = gallery.images[gallery.signatureImage]
+              
+              return (
+                <div
+                  key={index}
+                  id={`gallery-${index}`}
+                  className="space-y-6 sm:space-y-8"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 120}
+                >
+                  {/* Title */}
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                    <h2
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient text-center px-2"
+                      data-aos="zoom-in"
+                    >
+                      {gallery.title}
+                    </h2>
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                  </div>
+
+                  {/* Context Metadata */}
+                  <div className="text-center max-w-2xl mx-auto space-y-2">
+                    <p className="text-xs sm:text-sm uppercase tracking-wider text-primary/80">
+                      {gallery.date} · {gallery.location}
+                    </p>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed px-4">
+                      {gallery.description}
+                    </p>
+                  </div>
+
+                  {/* Cross-page Navigation Links */}
+                  <div className="flex justify-center gap-4 text-sm flex-wrap">
+                    <Link
+                      href="/about#timeline"
+                      className="underline text-primary hover:text-primary/80 transition-colors"
+                    >
+                      View in Timeline
+                    </Link>
+                    <span className="text-muted-foreground">·</span>
+                    <Link
+                      href="/news"
+                      className="underline text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Related News
+                    </Link>
+                  </div>
+
+                  {/* Signature Moment */}
+                  {signatureImg && (
+                    <div className="relative rounded-2xl overflow-hidden glass border border-primary/20 hover:border-primary/40 transition-all group">
+                      <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+                        <Image
+                          src={signatureImg.src}
+                          alt={signatureImg.alt}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          priority={index === 0}
+                          sizes="(max-width: 768px) 100vw, 90vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                          <p className="text-sm sm:text-base text-white italic max-w-2xl">
+                            "{gallery.signatureQuote}"
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* All Gallery Images */}
+                  <GalleryMasonry images={gallery.images} />
+                </div>
+              )
+            })}
           </div>
         </section>
 

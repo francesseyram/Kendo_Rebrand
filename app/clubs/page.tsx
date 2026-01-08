@@ -47,43 +47,86 @@ export default function ClubsPage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">Member Clubs</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Find a Kendo club near you and start your journey. Our member clubs are located across Ghana, offering
-            training for all skill levels.
+      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+        {/* Hero Section */}
+        <div className="max-w-4xl mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-block mb-4 sm:mb-6 px-4 py-2 rounded-full glass border border-primary/20">
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+              Member Clubs
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-balance text-gradient">
+            Member Clubs
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            The Ghana Kendo Federation oversees officially recognized dojos across the country,
+            each upholding the principles and discipline of Kendo.
           </p>
+          <div className="mt-6 sm:mt-8 h-0.5 w-24 bg-primary/60" />
         </div>
 
-        <div className="space-y-12 max-w-5xl">
-          {regions.map((region) => (
-            <div key={region.name}>
-              <div className="flex items-center gap-3 mb-6">
-                <MapPin className="h-6 w-6 text-kendo-red" />
-                <h2 className="text-3xl font-bold">{region.name}</h2>
+        {/* Regions */}
+        <div className="space-y-12 sm:space-y-16 max-w-5xl">
+          {regions.map((region, regionIndex) => (
+            <div
+              key={region.name}
+              className="relative pl-4 sm:pl-6 border-l border-border/60"
+              data-aos="fade-up"
+              data-aos-delay={regionIndex * 100}
+            >
+              {/* Region Header */}
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary shrink-0" />
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gradient">
+                  {region.name}
+                </h2>
               </div>
 
               {region.comingSoon ? (
-                <Card className="p-8 bg-muted/50">
-                  <p className="text-muted-foreground text-lg">Coming Soon</p>
+                <Card className="p-6 sm:p-8 bg-muted/40 border-dashed glass border border-primary/10">
+                  <p className="text-base sm:text-lg text-muted-foreground">
+                    Regional association currently under development.
+                  </p>
                 </Card>
               ) : (
-                <div className="grid md:grid-cols-2 gap-6">
-                  {region.clubs?.map((club) => (
-                    <Card key={club.slug} className="p-6 hover:shadow-lg transition-shadow">
-                      <h3 className="text-xl font-bold mb-4">{club.name}</h3>
-                      <Button asChild variant="outline" className="gap-2 bg-transparent">
+                <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                  {region.clubs?.map((club, clubIndex) => (
+                    <Card
+                      key={club.slug}
+                      data-aos="fade-up"
+                      data-aos-delay={clubIndex * 60}
+                      className="p-5 sm:p-6 border border-border/60 hover:border-primary/40 hover:shadow-md transition-all duration-300 glass"
+                    >
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-2 uppercase tracking-wide">
+                        Registered Member Club
+                      </p>
+                      <h3 className="text-lg sm:text-xl font-bold mb-4 leading-snug">
+                        {club.name}
+                      </h3>
+                      <Button asChild variant="outline" className="gap-2 bg-transparent hover:bg-primary/10">
                         <Link href={`/clubs/${club.slug}`}>
-                          View Details <ArrowRight className="h-4 w-4" />
+                          Learn More <ArrowRight className="h-4 w-4" />
                         </Link>
                       </Button>
                     </Card>
                   ))}
                 </div>
               )}
+
+              {/* Section Divider */}
+              {regionIndex < regions.length - 1 && (
+                <div className="h-px bg-border/60 my-8 sm:my-12" />
+              )}
             </div>
           ))}
+        </div>
+
+        {/* Ceremonial Closing */}
+        <div className="max-w-3xl mx-auto mt-16 sm:mt-20 md:mt-24 text-center" data-aos="fade-up">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4 sm:px-0">
+            Each dojo is guided by qualified instructors and operates under the standards
+            of the Ghana Kendo Federation.
+          </p>
         </div>
       </div>
 
