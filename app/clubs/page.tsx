@@ -66,7 +66,7 @@ export default function ClubsPage() {
         </div>
 
         {/* Regions */}
-        <div className="space-y-12 sm:space-y-16 max-w-5xl">
+        <div className="space-y-12 sm:space-y-16 max-w-6xl mx-auto">
           {regions.map((region, regionIndex) => (
             <div
               key={region.name}
@@ -89,7 +89,7 @@ export default function ClubsPage() {
                   </p>
                 </Card>
               ) : (
-                <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {region.clubs?.map((club, clubIndex) => (
                     <Card
                       key={club.slug}

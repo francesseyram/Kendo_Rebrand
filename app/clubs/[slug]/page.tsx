@@ -157,19 +157,21 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="max-w-5xl">
+        <div className="max-w-6xl mx-auto">
 
           <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             <div className="lg:col-span-2" data-aos="fade-up">
-              <Image
-                src={clubImageSrc}
-                alt={club.name}
-                width={900}
-                height={600}
-                className="rounded-xl shadow-2xl w-full object-contain"
-                priority
-                sizes="(max-width: 1024px) 100vw, 66vw"
-              />
+              <div className="flex items-center justify-center lg:justify-start">
+                <Image
+                  src={clubImageSrc}
+                  alt={club.name}
+                  width={900}
+                  height={600}
+                  className="rounded-xl shadow-2xl w-full max-w-2xl object-contain"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 66vw"
+                />
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -241,7 +243,7 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
           </div>
 
           {/* About Section */}
-          <div className="mt-12 sm:mt-16 md:mt-20 max-w-3xl" data-aos="fade-up">
+          <div className="mt-12 sm:mt-16 md:mt-20 max-w-3xl mx-auto" data-aos="fade-up">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gradient">About the Dojo</h2>
             <div className="h-0.5 w-16 bg-primary/60 mb-6" />
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">

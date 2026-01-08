@@ -1,36 +1,25 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Check } from "lucide-react"
+import { PaystackPaymentButton } from "@/components/donate/paystack-payment-button"
+import { CustomAmountForm } from "@/components/donate/custom-amount-form"
+import Link from "next/link"
 
-const tiers = [
+const impactAreas = [
   {
-    name: "Supporter",
+    title: "Grassroots Training",
+    description: "Support beginner programs, dojo maintenance, and youth outreach across Ghana.",
     amount: "₵50",
-    features: ["Support our grassroots programs", "Recognition on our website", "Federation newsletter"],
   },
   {
-    name: "Patron",
+    title: "Athlete Development",
+    description: "Help fund equipment, national training camps, and tournament participation.",
     amount: "₵200",
-    features: [
-      "All Supporter benefits",
-      "Exclusive event invitations",
-      "Federation merchandise",
-      "Priority event registration",
-    ],
-    popular: true,
   },
   {
-    name: "Champion",
+    title: "Legacy Support",
+    description: "Sustain the federation's long-term mission and international representation.",
     amount: "₵500",
-    features: [
-      "All Patron benefits",
-      "Name on donor wall",
-      "VIP seating at events",
-      "Private training session",
-      "Annual recognition award",
-    ],
   },
 ]
 
@@ -44,71 +33,66 @@ export default function DonatePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="container mx-auto px-4 py-24">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">Support Kendo in Ghana</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Your donation helps us provide equipment, training, and opportunities to aspiring Kendo practitioners across
-            Ghana. Together, we can grow the art of the sword.
+      {/* ACT I — WHY THIS MATTERS (Emotion First) */}
+      <div className="relative py-20 sm:py-24 md:py-32 border-b border-border/60 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
+          <p className="uppercase tracking-widest text-xs sm:text-sm text-muted-foreground mb-4" data-aos="fade-up">
+            Preserve the Way of the Sword
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-balance text-gradient" data-aos="fade-up" data-aos-delay="100">
+            Support the Growth of Kendo in Ghana
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            Your contribution helps train youth, provide equipment, and sustain the discipline, character, and tradition of Kendo for the next generation.
           </p>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {tiers.map((tier) => (
+      {/* ACT II — IMPACT, NOT TIERS */}
+      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+          {impactAreas.map((area, index) => (
             <Card
-              key={tier.name}
-              className={`p-8 relative ${tier.popular ? "border-kendo-red shadow-lg scale-105" : ""}`}
+              key={area.title}
+              className="p-6 sm:p-8 glass border border-primary/10 hover:border-primary/30 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              {tier.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-kendo-red text-white px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-              <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-              <div className="text-4xl font-bold mb-6 text-kendo-red">{tier.amount}</div>
-              <ul className="space-y-3 mb-8">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-kendo-red shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full" variant={tier.popular ? "default" : "outline"}>
-                Donate {tier.amount}
-              </Button>
+              <h3 className="text-xl font-semibold mb-4 text-gradient">{area.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 text-sm sm:text-base">
+                {area.description}
+              </p>
+              <PaystackPaymentButton
+                amount={parseFloat(area.amount.replace("₵", ""))}
+                label={`Donate ${area.amount}`}
+                description={area.title}
+                className="w-full bg-primary hover:bg-primary/90"
+              />
             </Card>
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-6">Custom Donation</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Want to contribute a different amount? Every donation, no matter the size, makes a meaningful impact on
-              our mission to promote Kendo in Ghana.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <Button variant="outline">₵100</Button>
-              <Button variant="outline">₵250</Button>
-              <Button variant="outline">₵1,000</Button>
-              <Button>Custom Amount</Button>
-            </div>
-          </Card>
+        {/* ACT III — SIMPLE, RESPECTFUL DONATION ACTION */}
+        <Card className="p-8 sm:p-10 mt-16 sm:mt-20 md:mt-24 max-w-3xl mx-auto text-center glass border border-primary/10" data-aos="fade-up">
+          <h3 className="text-2xl font-semibold mb-4 text-gradient">Make a Custom Contribution</h3>
+          <p className="text-muted-foreground mb-8 leading-relaxed text-sm sm:text-base">
+            Every contribution, regardless of amount, strengthens the future of Kendo in Ghana.
+          </p>
+          <CustomAmountForm />
+        </Card>
 
-          <div className="mt-12 text-center">
-            <h3 className="text-xl font-bold mb-4">Corporate Sponsorship</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Interested in becoming a corporate sponsor? We offer various partnership opportunities for businesses
-              looking to support sports and youth development.
-            </p>
-            <Button variant="outline" size="lg">
-              Contact Us About Sponsorship
-            </Button>
-          </div>
-        </div>
+        {/* Trust Signal */}
+        <p className="text-xs text-muted-foreground text-center mt-12 sm:mt-16 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up">
+          Ghana Kendo Federation is a recognized sporting body. Donations are used solely for training, development, and federation activities.
+        </p>
+
+        {/* Corporate Sponsorship — Quiet Link */}
+        <p className="mt-8 text-center text-xs sm:text-sm text-muted-foreground" data-aos="fade-up">
+          Interested in institutional or corporate sponsorship?{" "}
+          <Link href="/contact" className="underline hover:text-primary transition-colors">
+            Contact the Federation
+          </Link>
+        </p>
       </div>
 
       <Footer />
