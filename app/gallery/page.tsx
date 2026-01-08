@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import Image from "next/image"
+import { GalleryMasonry } from "@/components/gallery/gallery-masonry"
 
 export default function GalleryPage() {
   const galleries = [{
@@ -118,7 +118,7 @@ export default function GalleryPage() {
         },
         {
           src: "/gallery_images/1st_national_inter_kendo/newpic8.jpeg",
-          alt: "1st National Inter-Club Kendo Championships - Image 8",
+          alt: "Final Match – Accra, 2024",
         },
       ],
     },
@@ -301,27 +301,7 @@ export default function GalleryPage() {
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {gallery.images.map((image, imgIndex) => (
-                    <div
-                      key={imgIndex}
-                      className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 glass hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20"
-                    >
-                      <Image
-                        src={image.src || "/placeholder.svg"}
-                        alt={image.alt}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        loading={index === 0 && imgIndex < 2 ? "eager" : "lazy"}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                        <p className="text-sm font-medium text-foreground">{image.alt}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <GalleryMasonry images={gallery.images} />
               </div>
             ))}
           </div>
