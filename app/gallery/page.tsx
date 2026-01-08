@@ -5,65 +5,256 @@ import Image from "next/image"
 export default function GalleryPage() {
   const galleries = [
     {
-      title: "Training Sessions",
+      title: "1st National Inter-Club Kendo Championships",
       images: [
         {
-          src: "/kendo-training-session-with-practitioners-in-bogu-.jpg",
-          alt: "Kendo training session",
+          src: "/gallery_images/1st_national_inter_kendo/newpic1.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 1",
         },
         {
-          src: "/kendo-practitioners-practicing-men-strikes.jpg",
-          alt: "Men strikes practice",
+          src: "/gallery_images/1st_national_inter_kendo/newpic2.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 2",
         },
         {
-          src: "/kendo-dojo-with-students-in-formation.jpg",
-          alt: "Dojo formation",
+          src: "/gallery_images/1st_national_inter_kendo/newpic3.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 3",
         },
         {
-          src: "/kendo-instructor-demonstrating-technique.jpg",
-          alt: "Technique demonstration",
+          src: "/gallery_images/1st_national_inter_kendo/newpic4.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 4",
+        },
+        {
+          src: "/gallery_images/1st_national_inter_kendo/newpic5.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 5",
+        },
+        {
+          src: "/gallery_images/1st_national_inter_kendo/newpic6.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 6",
+        },
+        {
+          src: "/gallery_images/1st_national_inter_kendo/newpic7.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 7",
+        },
+        {
+          src: "/gallery_images/1st_national_inter_kendo/newpic8.jpeg",
+          alt: "1st National Inter-Club Kendo Championships - Image 8",
         },
       ],
     },
     {
-      title: "Tournaments & Events",
+      title: "4th Japanese Ambassador Championship",
       images: [
         {
-          src: "/kendo-tournament-match-with-referee.jpg",
-          alt: "Tournament match",
+          src: "/gallery_images/4th_japanese_ambassador/kendo_1.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 1",
         },
         {
-          src: "/kendo-championship-trophy-presentation.jpg",
-          alt: "Championship trophy",
+          src: "/gallery_images/4th_japanese_ambassador/kendo_2.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 2",
         },
         {
-          src: "/kendo-participants-group-photo-at-event.jpg",
-          alt: "Event group photo",
+          src: "/gallery_images/4th_japanese_ambassador/kendo_3.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 3",
         },
         {
-          src: "/kendo-opening-ceremony-with-flags.jpg",
-          alt: "Opening ceremony",
+          src: "/gallery_images/4th_japanese_ambassador/kendo_4.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 4",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_5.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 5",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_6.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 6",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_7.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 7",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_8.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 8",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_9.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 9",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_10.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 10",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_11.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 11",
+        },
+        {
+          src: "/gallery_images/4th_japanese_ambassador/kendo_12.jpg",
+          alt: "4th Japanese Ambassador Championship - Image 12",
         },
       ],
     },
     {
-      title: "Community",
+      title: "5th Japanese Ambassador Championship",
       images: [
         {
-          src: "/young-kendo-students-learning-basics.jpg",
-          alt: "Youth training",
+          src: "/gallery_images/5th_japanese_ambasador/kendo_13.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 13",
         },
         {
-          src: "/kendo-club-members-celebrating-together.jpg",
-          alt: "Club celebration",
+          src: "/gallery_images/5th_japanese_ambasador/kendo_14.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 14",
         },
         {
-          src: "/kendo-seminar-with-visiting-instructor.jpg",
-          alt: "Special seminar",
+          src: "/gallery_images/5th_japanese_ambasador/kendo_15.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 15",
         },
         {
-          src: "/kendo-demonstration-for-public-audience.jpg",
-          alt: "Public demonstration",
+          src: "/gallery_images/5th_japanese_ambasador/kendo_16.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 16",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_17.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 17",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_18.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 18",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_19.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 19",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_20.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 20",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_21.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 21",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_22.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 22",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_23.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 23",
+        },
+        {
+          src: "/gallery_images/5th_japanese_ambasador/kendo_24.jpg",
+          alt: "5th Japanese Ambassador Championship - Image 24",
+        },
+      ],
+    },
+    {
+      title: "GKF Referee Seminar",
+      images: [
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_25.jpg",
+          alt: "GKF Referee Seminar - Image 25",
+        },
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_27.jpg",
+          alt: "GKF Referee Seminar - Image 27",
+        },
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_28.jpg",
+          alt: "GKF Referee Seminar - Image 28",
+        },
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_29.jpg",
+          alt: "GKF Referee Seminar - Image 29",
+        },
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_31.jpg",
+          alt: "GKF Referee Seminar - Image 31",
+        },
+        {
+          src: "/gallery_images/GKF_referee_seminar/kendo_32.jpg",
+          alt: "GKF Referee Seminar - Image 32",
+        },
+      ],
+    },
+    {
+      title: "Saturday Training Sessions",
+      images: [
+        {
+          src: "/gallery_images/saturday_training/practice_1.jpeg",
+          alt: "Saturday Training Session - Practice 1",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_2.jpeg",
+          alt: "Saturday Training Session - Practice 2",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_3.jpeg",
+          alt: "Saturday Training Session - Practice 3",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_4.jpeg",
+          alt: "Saturday Training Session - Practice 4",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_5.jpeg",
+          alt: "Saturday Training Session - Practice 5",
+        },
+        {
+          src: "/gallery_images/saturday_training/practice_6.jpeg",
+          alt: "Saturday Training Session - Practice 6",
+        },
+      ],
+    },
+    {
+      title: "Tunis International Open",
+      images: [
+        {
+          src: "/gallery_images/tunisia/kendo_4.jpeg",
+          alt: "Tunis International Open - Image 4",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_5.jpeg",
+          alt: "Tunis International Open - Image 5",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_6.jpeg",
+          alt: "Tunis International Open - Image 6",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_7.jpeg",
+          alt: "Tunis International Open - Image 7",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_8.jpeg",
+          alt: "Tunis International Open - Image 8",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_9.jpeg",
+          alt: "Tunis International Open - Image 9",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_10.jpeg",
+          alt: "Tunis International Open - Image 10",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_11.jpeg",
+          alt: "Tunis International Open - Image 11",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_12.jpeg",
+          alt: "Tunis International Open - Image 12",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_13.jpeg",
+          alt: "Tunis International Open - Image 13",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_14.jpeg",
+          alt: "Tunis International Open - Image 14",
+        },
+        {
+          src: "/gallery_images/tunisia/kendo_15.jpeg",
+          alt: "Tunis International Open - Image 15",
         },
       ],
     },
