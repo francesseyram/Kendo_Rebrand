@@ -44,22 +44,23 @@ const products = [
   },
   {
     id: 7,
+    name: "Kote",
+    image: "/shop/kote.jpeg",
+    description: "Protective gloves for the hands and wrists",
+  },
+  {
+    id: 8,
     name: "Complete Bogu Set",
     image: "/shop/kendo-bogu-complete-set.jpg",
     description: "Full protective armor set including men, kote, dō, and tare for safe and proper Kendo practice",
   },
   {
-    id: 8,
+    id: 9,
     name: "Bokuto (Wooden Sword)",
     image: "/shop/bokuto-wooden-sword-kendo.jpg",
     description: "Solid oak practice sword",
   },
-  {
-    id: 9,
-    name: "Shinai Bag",
-    image: "/shop/kendo-shinai-bag-equipment.jpg",
-    description: "Durable bag for transporting shinai",
-  },
+  
 ]
 
 export const metadata = {
