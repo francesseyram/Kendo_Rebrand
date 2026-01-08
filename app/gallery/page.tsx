@@ -229,7 +229,7 @@ export default function GalleryPage() {
       ],
     },
     {
-      title: "GKF Referee Seminar",
+      title: "Ghana Kendo Federation Referee Seminar",
       images: [
         {
           src: "/gallery_images/GKF_referee_seminar/kendo_25.jpg",
